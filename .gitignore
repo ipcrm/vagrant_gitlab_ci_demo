@@ -4,6 +4,8 @@ config/pe_build.yaml
 .pe_build
 .ruby-version
 .vagrant
+test_modules/*
+puppet-*
 Gemfile.local
 Gemfile.lock
 bin

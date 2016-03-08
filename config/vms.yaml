@@ -33,7 +33,7 @@ vms:
       - agent
       - el-stop-firewall
       - el-fix-path
-      - 1gb-memory
+      - 4gb-memory
       - base
       - trusted_fact_jenkins_slave
 
