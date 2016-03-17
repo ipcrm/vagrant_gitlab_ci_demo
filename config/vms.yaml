@@ -17,26 +17,6 @@ vms:
       - setup_codemanager
 
 
-  - name: jenkins-master
-    box: puppetlabs/centos-7.0-64-nocm
-    roles:
-      - agent
-      - el-stop-firewall
-      - el-fix-path
-      - 1gb-memory
-      - base
-      - trusted_fact_jenkins_master
-
-  - name: jenkins-slave
-    box: puppetlabs/centos-7.0-64-nocm
-    roles:
-      - agent
-      - el-stop-firewall
-      - el-fix-path
-      - 4gb-memory
-      - base
-      - trusted_fact_jenkins_slave
-
   - name: gitlab
     box: puppetlabs/centos-7.0-64-nocm 
     roles:
@@ -46,5 +26,15 @@ vms:
       - 1gb-memory
       - base
       - trusted_fact_gitlab
+
+  - name: gitlab_runner
+    box: puppetlabs/centos-7.0-64-nocm 
+    roles:
+      - agent
+      - el-stop-firewall
+      - el-fix-path
+      - 1gb-memory
+      - base
+      - trusted_fact_gitlab_runner
 
 # vim: set ft=yaml:

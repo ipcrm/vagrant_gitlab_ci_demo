@@ -43,6 +43,13 @@ roles:
       - type: shell
         inline: 'mkdir -p /etc/puppetlabs/puppet; cp /vagrant/trusted_facts/gitlab_csr_attributes.yaml /etc/puppetlabs/puppet/csr_attributes.yaml'
 
+  trusted_fact_gitlab_runner:
+    provisioners:
+      - type: shell
+        inline: 'yum update -y'
+      - type: shell
+        inline: 'mkdir -p /etc/puppetlabs/puppet; cp /vagrant/trusted_facts/gitlab_csr_attributes.yaml /etc/puppetlabs/puppet/csr_attributes.yaml'
+
   run_r10k:
     provisioners: 
       - type: shell
